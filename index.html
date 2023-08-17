@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./styles/styles.css" />
     <style>
-      li {
+      .fruits-container li {
         color: tomato;
       }
       #fruits-title{
@@ -53,6 +53,8 @@
 
     <script src="./js/dom.js"></script>
     <script>
+      // option-1
+      // getElementsByTagName
       const liCollection = document.getElementsByTagName("li");
       // console.log(liCollection);
       for (const li of liCollection) {
@@ -63,13 +65,30 @@
       for (const h1 of allHeadings) {
         // console.log(h1.innerText);
       }
+      // option 02
+      // getElementById
       const fruitsTitle = document.getElementById('fruits-title');
       fruitsTitle.innerText='Fruits changed by JS';
       console.log(fruitsTitle.innerText);
 
+      // option 3
+      // getElementByClassName
       const places = document.getElementsByClassName('important-places');
       for(const place of places){
-        console.log(place.innerText);
+        // console.log(place.innerText);
+      }
+
+      // option 04
+      // querySelection
+      const li = document.querySelector('.fruits-container li');
+      console.log(li);
+
+      // option 05
+      // querySelectorAll
+      const someLi = document.querySelectorAll('.fruits-container li');
+      // console.log(someLi);
+      for(const li of someLi){
+        // console.log(li.innerHTML);
       }
     </script>
   </body>
