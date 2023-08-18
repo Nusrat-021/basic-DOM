@@ -26,7 +26,7 @@ for (const place of places) {
 
 // option 04
 // querySelection
-const li = document.querySelector(".fruits-container li");
+// const li = document.querySelector(".fruits-container li");
 // console.log(li);
 
 // option 05
