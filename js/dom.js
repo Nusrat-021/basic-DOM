@@ -14,7 +14,7 @@ for (const h1 of allHeadings) {
 // option 02
 // getElementById
 const fruitsTitle = document.getElementById("fruits-title");
-fruitsTitle.innerText = "Fruits changed by JS";
+// fruitsTitle.innerText = "Fruits changed by JS";
 // console.log(fruitsTitle.innerText);
 
 // option 3
@@ -63,6 +63,9 @@ title.setAttribute('title','tooltip set by JavaScript');
 // innerHTML
 /* const fruitsContainer = document.getElementsByClassName('fruits-container')[0].innerHTML='<h2>WOW DOM is changing</h2>';
 console.log(fruitsContainer); */
+
+
+
 
 
 
