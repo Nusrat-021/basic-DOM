@@ -3,49 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>More event-listener</title>
+    <title>Github Delete</title>
 </head>
 <body>
-    <h1>Explore More Events</h1>
-    <button id="btn-more">Events</button>
-    <input type="text" name="" id="text-field">
+    <h1 id="secret-info">My Secret Info</h1>
+    <input type="text" placeholder="please write delete" name="" id="delete-confirm">
+    <button disabled id="btn-delete">Delete</button>
 
 
     <script>
-        // event handler
-        // focus
-        // document.getElementById('text-field').addEventListener('focus',function(){
-        //     console.log('event triggered inside the input field on focus');
-        // })
-        // blur
-        // document.getElementById('text-field').addEventListener('blur',function(){
-        //     console.log('event triggered inside the input field on blur');
-        // })
-        // click
-        document.getElementById('btn-more').addEventListener('click',function(){
-            console.log('click on button');
-        })
-        // mouseenter
-        document.getElementById('btn-more').addEventListener('mouseenter',function(){
-            console.log('event triggered on mouse enter');
-        }) 
+        document.getElementById('delete-confirm').addEventListener('keyup',function(event){
+                if(event.target.value.toLowerCase() === 'delete')
+                {
+                    document.getElementById('btn-delete').removeAttribute('disabled');
+                }
+            
+                else{
+                    document.getElementById('btn-delete').setAttribute('disabled',true);
+                }
+            });
 
-        // keydown
-        // document.getElementById('text-field').addEventListener('keydown',function(event){
-        //     // console.log('event triggered inside the input field on key down');
-        //     console.log(event.target.value);
-        // })
-        // key press
-        // document.getElementById('text-field').addEventListener('keypress',function(event){
-        //     // console.log('event triggered inside the input field on key down');
-        //     console.log(event.target.value);
-        // })
-        // key up
-        document.getElementById('text-field').addEventListener('keyup',function(event){
-            // console.log('event triggered inside the input field on key up');
-            console.log(event.target.value);
+        document.getElementById('btn-delete').addEventListener('click',function(){
+            
+
+            const secretInfo = document.getElementById('secret-info');
+            secretInfo.style.display='none';
+
+            document.getElementById('delete-confirm').value='';
+            
+
+            
         })
-        
     </script>
 </body>
 </html>
